@@ -1,5 +1,8 @@
-import { endpoint, interval } from './config';
+import React from 'react'
+import { render } from 'react-dom'
+import MainPage from './components/MainPage'
 
-export function run(element) {
-    console.log('App is running.');
-}
+render(
+  <MainPage />,
+  document.getElementById('exchange-rate-client')
+)
