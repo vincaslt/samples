@@ -1,11 +1,12 @@
-import 'sanitize.css/sanitize.css';
+import 'sanitize.css/sanitize.css'
+import 'react-select/dist/react-select.css'
 import React from 'react'
 import { render } from 'react-dom'
 import MainPage from './components/MainPage'
 import reducers from './reducers'
-import { createStore, applyMiddleware,  } from 'redux';
+import { createStore, applyMiddleware,  } from 'redux'
 import createSagaMiddleware from 'redux-saga'
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"
 
 import './global.css'
 

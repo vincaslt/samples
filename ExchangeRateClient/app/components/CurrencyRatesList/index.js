@@ -3,7 +3,7 @@ import Entry from './Entry'
 
 const CurrencyRatesList = (props) => (
   <div>
-    <Entry name="EUR" value="1.33" trend="growing" />
+    <Entry name="EUR" value={1.33} trend="growing" />
   </div>
 )
 

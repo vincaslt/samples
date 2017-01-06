@@ -25,7 +25,12 @@ const webpackConfig = {
             loader: 'json',
         }, {
             test: /\.css$/,
-            loader: "style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]"
+            exclude: [/node_modules/, '/app/global.css'],
+            loader: "style!css?modules"
+        }, {
+            test: /\.css$/,
+            include: /node_modules/,
+            loader: "style!css"
         }]
     },
     devtool: 'eval',

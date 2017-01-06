@@ -1,18 +1,20 @@
 import React from 'react'
-import style from './style.css'
 import CurrencyRatesList from '../CurrencyRatesList'
+import CurrencyFilter from '../CurrencyFilter'
+import CSSModules from 'react-css-modules';
+import style from './style.css'
 
 const MainPage = () => (
-  <div className={style.contentContainer}>
-    <div className={style.content}>
-      <div className={style.filterContainer}>
-        filter
+  <div styleName="content-container">
+    <div styleName="content">
+      <div styleName="filter-container">
+        <CurrencyFilter/>
       </div>
-      <div className={style.listContainer}>
+      <div styleName="list-container">
         <CurrencyRatesList/>
       </div>
     </div>  
   </div>
 );
 
-export default MainPage;
+export default CSSModules(MainPage, style);

@@ -1,9 +1,10 @@
-.contentContainer {
+.content-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding-top: 50px;
 }
+
 
 .content {
   display: flex;
@@ -15,14 +16,24 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-.filterContainer {
+@media(max-width:960px) {
+  .content {
+    flex: 0 0 100%;
+  }
+
+  .content-container {
+    padding-top: 0;
+  }
+}
+
+.filter-container {
   display: flex;
   min-height: 50px;
   background: #EFEFEF;
   padding: 25px;
 }
 
-.listContainer {
+.list-container {
   display: flex;
   padding: 25px;
 }
