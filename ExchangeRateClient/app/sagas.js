@@ -8,7 +8,7 @@ function* startUpdates() {
   const rates = yield call(axios.get, config.ratesEndpoint, {
     params: {
       currencyPairIds: ['70c6744c-cba2-5f4c-8a06-0dac0c4e43a1', 'a2bda952-4369-5d41-9d0b-e6c9947e5b82']
-    } // TODO: use reselect for selector
+    } // TODO: use reselect for selector and handle errors
   })
   yield put(receiveRates(rates))
   yield delay(config.interval)
@@ -17,7 +17,7 @@ function* startUpdates() {
 
 export function* requestStartUpdates() {
   yield take(REQUEST_START_UPDATES)
-  const configuration = yield call(axios, config.configurationEndpoint)
+  const configuration = yield call(axios, config.configurationEndpoint) // TODO: handle errors
   yield put(receiveConfiguration(configuration))
   yield put(requestUpdateRates())
 }
