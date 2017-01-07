@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Select from 'react-select'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import style from './style.css'
 
 const CurrencyFilter = ({ selectedOptions = [], allOptions = [], onChange, loading = false }) => (

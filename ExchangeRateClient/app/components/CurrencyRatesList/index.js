@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Entry, { rateListEntryShape } from './Entry'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import style from './style.css'
 
 const CurrencyRatesList = ({ rates }) => {

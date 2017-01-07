@@ -1,7 +1,7 @@
 import React from 'react'
 import CurrencyRatesList from '../../containers/CurrencyRatesListContainer'
 import CurrencyFilter from '../../containers/CurrencyFilterContainer'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import style from './style.css'
 
 const MainPage = () => (
@@ -15,6 +15,6 @@ const MainPage = () => (
       </div>
     </div>  
   </div>
-);
+)
 
-export default CSSModules(MainPage, style);
+export default CSSModules(MainPage, style)

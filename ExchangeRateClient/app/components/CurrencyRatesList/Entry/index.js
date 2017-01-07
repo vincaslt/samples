@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules'
 import style from './style.css'
 
 const Entry = ({ name, value, trend }) => {

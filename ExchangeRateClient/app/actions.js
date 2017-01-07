@@ -15,10 +15,3 @@ export const changeCurrencyFilter = (options) => ({
   type: CHANGE_CURRENCY_FILTER,
   filteredIds: options.map(option => option.value) 
 })
-
-
-
-
-
-
-
