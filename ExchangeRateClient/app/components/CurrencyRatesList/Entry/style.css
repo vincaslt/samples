@@ -15,3 +15,15 @@
   flex: 1;
   padding: 5px 15px;
 }
+
+.status-ok {
+  color: darkorange;
+}
+
+.status-good {
+  color: green;
+}
+
+.status-bad {
+  color: darkred;
+}

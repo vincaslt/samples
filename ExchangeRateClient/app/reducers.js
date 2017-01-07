@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux'
 import { RECEIVE_RATES, RECEIVE_CONFIGURATION, REQUEST_START_UPDATES, REQUEST_UPDATE_RATES, CHANGE_CURRENCY_FILTER } from './actions'
 
-const configurationInitialState = { loading: false }
+export const configurationInitialState = { loading: false, isLoaded: false }
 const configuration = (state = configurationInitialState, { type, configuration, filteredIds }) => {
   switch(type) {
     case RECEIVE_CONFIGURATION:
       return {
         ...state,
         ...configuration,
-        loading: false
+        loading: false,
+        isLoaded: true
       }
     case REQUEST_START_UPDATES:
       return {

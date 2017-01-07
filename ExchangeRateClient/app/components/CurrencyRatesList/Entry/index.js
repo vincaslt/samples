@@ -3,12 +3,20 @@ import CSSModules from 'react-css-modules';
 import style from './style.css'
 
 const Entry = ({ name, value, trend }) => {
-  const column = (text) => <div styleName="column">{text}</div>
+  const column = (text, status) => <div styleName={`column ${status || ''}`}>{text}</div>
+  const getStatus = (trend) => {
+    switch(trend) {
+      case 'stagnating': return 'status-ok'
+      case 'growing': return 'status-good'
+      case 'declining': return 'status-bad'
+      default: return null
+    }
+  }
   return (
     <div styleName="row">
       {column(name)}
       {column(value)}
-      {column(trend)}
+      {column(trend, getStatus(trend))}
     </div>
   )
 }
@@ -21,4 +29,4 @@ export const rateListEntryShape = {
 
 Entry.propTypes = rateListEntryShape
 
-export default CSSModules(Entry, style)
+export default CSSModules(Entry, style, { allowMultiple: true})
