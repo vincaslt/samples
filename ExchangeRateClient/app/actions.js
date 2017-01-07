@@ -10,7 +10,11 @@ export const requestUpdateRates = () => ({ type: REQUEST_UPDATE_RATES })
 export const RECEIVE_RATES = 'RECEIVE_RATES'
 export const receiveRates = (rates) => ({ type: RECEIVE_RATES, rates })
 
-
+export const CHANGE_CURRENCY_FILTER = 'CHANGE_CURRENCY_FILTER'
+export const changeCurrencyFilter = (options) => ({
+  type: CHANGE_CURRENCY_FILTER,
+  filteredIds: options.map(option => option.value) 
+})
 
 
 

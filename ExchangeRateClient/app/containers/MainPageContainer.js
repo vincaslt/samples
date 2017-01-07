@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import MainPage from '../components/MainPage'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { requestStartUpdates } from '../actions'
 
 class MainPageContainer extends React.Component {
@@ -18,10 +17,8 @@ MainPageContainer.propTypes = {
   startRateUpdates: PropTypes.func
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  startRateUpdates: bindActionCreators(requestStartUpdates, dispatch)
-})
-
-
+const mapDispatchToProps = {
+  startRateUpdates: requestStartUpdates
+}
 
 export default connect(null, mapDispatchToProps)(MainPageContainer)

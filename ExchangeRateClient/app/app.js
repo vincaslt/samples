@@ -1,7 +1,7 @@
 import 'sanitize.css/sanitize.css'
 import 'react-select/dist/react-select.css'
 import React from 'react'
-import 'babel-polyfill';
+import 'babel-polyfill'
 import { render } from 'react-dom'
 import MainPage from './containers/MainPageContainer'
 import reducers from './reducers'
