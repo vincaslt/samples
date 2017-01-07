@@ -1,13 +1,15 @@
 import { REQUEST_UPDATE_RATES, REQUEST_START_UPDATES, receiveConfiguration, receiveRates, requestUpdateRates } from './actions'
-import { take, call, put, takeLatest } from 'redux-saga/effects'
+import { take, call, put, takeLatest, select } from 'redux-saga/effects'
 import { delay } from 'redux-saga'
 import { fetchRates, fetchConfiguration } from './api'
 import { interval } from './config.json'
+import { currencyPairsIdsSelector } from './selectors'
 
 
 function* updateRates() {
+  const currencyPairIds = yield select(currencyPairsIdsSelector)
   try {
-    const { data } = yield call(fetchRates)
+    const { data } = yield call(fetchRates, currencyPairIds)
     yield put(receiveRates(data))
     yield delay(interval)
   } catch ({ response }) {

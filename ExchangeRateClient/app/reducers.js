@@ -1,15 +1,11 @@
 import { combineReducers } from 'redux'
+import { RECEIVE_RATES, RECEIVE_CONFIGURATION } from './actions'
 
-export const rates = (state = {}, action) => {
-  // switch (action.type) {
-  //   case ACTION_TYPE_1:
-  //     return state
-  //   case ACTION_TYPE_2:
-  //     return state
-  //   default:
-  //     return state
-  // }
-
-  return state
+const configuration = (state = {}, { type, configuration }) => {
+  return type === RECEIVE_CONFIGURATION ? configuration : state
 }
-export default combineReducers({ rates })
+
+const rates = (state = {}, { type, rates }) => {
+  return type === RECEIVE_RATES ? rates : state
+}
+export default combineReducers({ rates, configuration })
