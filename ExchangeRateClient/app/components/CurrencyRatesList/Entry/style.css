@@ -1,0 +1,17 @@
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-left: 1px solid #EFEFEF;
+  border-right: 1px solid #EFEFEF;
+}
+
+.row:last-child {
+  border-bottom: 1px solid #EFEFEF;
+}
+
+.column {
+  display: flex;
+  flex: 1;
+  padding: 5px 15px;
+}

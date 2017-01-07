@@ -1,5 +1,5 @@
 import React from 'react'
-import CurrencyRatesList from '../CurrencyRatesList'
+import CurrencyRatesList from '../../containers/CurrencyRatesListContainer'
 import CurrencyFilter from '../../containers/CurrencyFilterContainer'
 import CSSModules from 'react-css-modules';
 import style from './style.css'

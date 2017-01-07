@@ -10,7 +10,7 @@ function* updateRates() {
   const currencyPairIds = yield select(currencyPairsIdsSelector)
   try {
     const { data } = yield call(fetchRates, currencyPairIds)
-    yield put(receiveRates(data))
+    yield put(receiveRates(data.rates))
     yield delay(interval)
   } catch ({ response }) {
     if (response.status === 500) {
